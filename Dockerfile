@@ -12,4 +12,4 @@ WORKDIR /app
 
 COPY --from=0 /app/main ./
 
-CMD ["/main"]
+CMD ["./main"]
