@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY main.go go.mod ./
 
-RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o bagend
+RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o main
 
 FROM alpine:latest
 
 WORKDIR /app
 
-COPY --from=0 /app/bagend ./
+COPY --from=0 /app/main ./
