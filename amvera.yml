@@ -1,4 +1,0 @@
-run:
-  command: /app/main
-  args: --port 8080
-  containerPort: 8080
