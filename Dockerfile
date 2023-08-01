@@ -12,4 +12,6 @@ WORKDIR /app
 
 COPY --from=0 /app/main ./
 
+RUN apk --no-cache add ca-certificates
+
 CMD ["./main"]
