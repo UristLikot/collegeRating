@@ -2,7 +2,7 @@ FROM golang:1.20
 
 WORKDIR /app
 
-COPY main.go go.mod go.sum ./
+COPY . ./
 
 RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o main
 
