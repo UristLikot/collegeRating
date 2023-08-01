@@ -14,4 +14,6 @@ COPY --from=0 /app/main ./
 
 RUN apk --no-cache add ca-certificates
 
+ADD vsuwt.crt /etc/ssl/certs/
+
 CMD ["./main"]
