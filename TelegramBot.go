@@ -23,8 +23,8 @@ func telegramBot() {
 			continue
 		}
 		nntc := NntcHandler()
-		logistics := LogisticsGetOriginals("https://tinyurl.com/4fnb7jka", "Логистика речное")
-		cs := LogisticsGetOriginals("https://tinyurl.com/mr2kmznn", "Информатика речное")
+		logistics := LogisticsGetOriginals("https://shorturl.at/brQZ3", "Логистика речное")
+		cs := LogisticsGetOriginals("https://shorturl.at/GKM78", "Информатика речное")
 		msg := tgbotapi.NewMessage(update.Message.Chat.ID, fmt.Sprintf("%v\n%v\n%v", nntc, logistics, cs))
 
 		bot.Send(msg)
