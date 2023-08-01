@@ -1,6 +1,9 @@
 package main
 
-import tgbotapi "github.com/Syfaro/telegram-bot-api"
+import (
+	"fmt"
+	tgbotapi "github.com/Syfaro/telegram-bot-api"
+)
 
 func telegramBot() {
 	bot, err := tgbotapi.NewBotAPI("6596621401:AAGzae_kFiZQUdGrQMU9T_TiMzssZfid-kk")
@@ -19,13 +22,11 @@ func telegramBot() {
 		if update.Message == nil {
 			continue
 		}
+		nntc := NntcHandler()
+		logistics := LogisticsGetOriginals("https://tinyurl.com/4fnb7jka", "Логистика речное")
+		cs := LogisticsGetOriginals("https://tinyurl.com/mr2kmznn", "Информатика речное")
+		msg := tgbotapi.NewMessage(update.Message.Chat.ID, fmt.Sprintf("%v\n%v\n%v", nntc, logistics, cs))
 
-		msg := tgbotapi.NewMessage(update.Message.Chat.ID, NntcHandler())
-
-		bot.Send(msg)
-		msg = tgbotapi.NewMessage(update.Message.Chat.ID, LogisticsGetOriginals("https://tinyurl.com/4fnb7jka", "Логистика речное"))
-		bot.Send(msg)
-		msg = tgbotapi.NewMessage(update.Message.Chat.ID, LogisticsGetOriginals("https://tinyurl.com/mr2kmznn", "Информатика речное"))
 		bot.Send(msg)
 
 	}
