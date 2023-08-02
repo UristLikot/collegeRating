@@ -15,7 +15,8 @@ COPY --from=0 /app/main ./
 RUN apk --no-cache add ca-certificates poppler-utils
 
 ADD vsuwt.crt /etc/ssl/certs/
-
+EXPOSE 80
+EXPOSE 433
+EXPOSE 5222
 CMD ["./main"]
 
-EXPOSE 80

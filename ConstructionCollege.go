@@ -41,15 +41,15 @@ func nnst(y string) string {
 		return ""
 	}
 	htmlFile, _ := os.Create("temp.html")
-	//33-37
+	//21-32
 	for k, page := range pages {
-		if k >= 32 && k <= 36 {
+		if k >= 20 && k <= 31 {
 
 			html, err := page.Html()
 			if err != nil {
 				return ""
 			}
-			html = strings.ReplaceAll(html, "ft332", "ft331")
+			html = strings.ReplaceAll(html, "ft202", "ft201")
 			t := strings.NewReader(html)
 			io.Copy(htmlFile, t)
 
@@ -64,7 +64,7 @@ func nnst(y string) string {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-	classes := []string{"ft331", "ft340", "ft350", "ft360", "ft370"}
+	classes := []string{"ft201", "ft210", "ft220", "ft230", "ft240", "ft250", "ft260", "ft270", "ft290", "ft300", "ft310"}
 	var node []*html.Node
 	for _, v := range classes {
 		for _, v := range restify.FindSubsetByClass(parsedHtml, v) {
