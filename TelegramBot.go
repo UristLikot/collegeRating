@@ -6,7 +6,7 @@ import (
 )
 
 func telegramBot() {
-	bot, err := tgbotapi.NewBotAPI("6596621401:AAGzae_kFiZQUdGrQMU9T_TiMzssZfid-kk")
+	bot, err := tgbotapi.NewBotAPI("6497184070:AAEWtf03snLVT-MebowH2vF1zVnyRPRlUNg")
 	if err != nil {
 		panic(err)
 	}
