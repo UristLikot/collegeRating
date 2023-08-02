@@ -48,7 +48,7 @@ func nnst(y string) string {
 	//33-37
 	for k, page := range pages {
 		if k >= 32 && k <= 36 {
-			fmt.Println(page.Html())
+
 			html, err := page.Html()
 			if err != nil {
 				return ""
@@ -56,7 +56,7 @@ func nnst(y string) string {
 			html = strings.ReplaceAll(html, "ft332", "ft331")
 			t := strings.NewReader(html)
 			io.Copy(htmlFile, t)
-			fmt.Println(page.Number)
+
 		}
 	}
 
