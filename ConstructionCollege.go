@@ -29,14 +29,10 @@ func nnst(y string) string {
 		return ""
 	}
 
-	text, err := reader.Text()
-
 	if err != nil {
 		log.Printf("Err: %v", err)
 		return ""
 	}
-
-	fmt.Printf("TEXT: %s", text)
 
 	pages, err := reader.Pages()
 
