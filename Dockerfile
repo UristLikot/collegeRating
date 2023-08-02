@@ -12,7 +12,7 @@ WORKDIR /app
 
 COPY --from=0 /app/main ./
 
-RUN apk --no-cache add ca-certificates
+RUN apk --no-cache add ca-certificates poppler-utils
 
 ADD vsuwt.crt /etc/ssl/certs/
 

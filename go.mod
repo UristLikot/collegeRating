@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/Syfaro/telegram-bot-api v4.6.4+incompatible
 	github.com/itzg/restify v1.5.0
+	github.com/rudolfoborges/pdf2go v0.1.1
 )
 
 require (
